@@ -8,7 +8,7 @@ create table driver (
 	name nvarchar(100) not null, -- họ tên
 	address nvarchar(100) not null, -- địa chỉ
 	phoneNumber varchar(20)  not null, -- số điện thoại
-	level char(2) not null -- trình độ
+	level varchar(2) not null -- trình độ
 );
 
 -- bus line

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Set URL -->
+        <property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/driver_management</property>
+
+        <!-- Set Username -->
+        <property name = "hibernate.connection.username">root</property>
+
+        <!-- Set Password -->
+        <property name = "hibernate.connection.password">Tuna.1203</property>
+
+        <!-- Set Driver Name -->
+        <property name = "hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <property name = "hibernate.show_sql">true</property>
+
+        <!-- Optional: Auto-generate schema -->
+        <!-- <property name = "hibernate.hbm2ddl.auto">create</property> -->
+
+        <!-- SQL dialect -->
+<!--        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+        <!-- Validate the database schema on startup -->
+        <property name="hbm2ddl.auto">validate</property>
+
+        <!-- Names the annotated entity class -->
+        <mapping class="hibernate.object.Driver"/>
+        <mapping class="hibernate.object.Line"/>
+        <mapping class="hibernate.object.Assignment"/>
+
+    </session-factory>
+</hibernate-configuration>
